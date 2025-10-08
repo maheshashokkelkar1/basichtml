@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Elements Demonstration</title>
+</head>
+<body>
+
+    <h1>HTML Form Elements</h1>
+
+    <form action="/submit-data" method="post">
+        <h2>Basic Inputs</h2>
+        
+        <p>
+            <label for="text_input">Text Input:</label>
+            <input type="text" id="text_input" name="text_input">
+        </p>
+
+        <p>
+            <label for="password_input">Password Input:</label>
+            <input type="password" id="password_input" name="password_input">
+        </p>
+
+        <p>
+            <label for="email_input">Email Input:</label>
+            <input type="email" id="email_input" name="email_input">
+        </p>
+
+        <p>
+            <label for="number_input">Number Input:</label>
+            <input type="number" id="number_input" name="number_input">
+        </p>
+
+        <p>
+            <label for="date_input">Date Input:</label>
+            <input type="date" id="date_input" name="date_input">
+        </p>
+
+        <p>
+            <label for="file_input">File Input (Upload):</label>
+            <input type="file" id="file_input" name="file_input">
+        </p>
+
+        <p>
+            <label for="range_input">Range Input (Slider):</label>
+            <input type="range" id="range_input" name="range_input" min="0" max="100">
+        </p>
+
+        <p>
+            <label for="color_input">Color Input:</label>
+            <input type="color" id="color_input" name="color_input">
+        </p>
+
+        <hr>
+        <h2>Choice Inputs</h2>
+
+        <p>
+            <label for="checkbox_input">Checkbox:</label>
+            <input type="checkbox" id="checkbox_input" name="checkbox_input">
+        </p>
+
+        <p>
+            Radio Buttons:
+            <input type="radio" id="radio1" name="radio_group" value="option1">
+            <label for="radio1">Option 1</label>
+            <input type="radio" id="radio2" name="radio_group" value="option2">
+            <label for="radio2">Option 2</label>
+        </p>
+        
+        <p>
+            <label for="dropdown_select">Dropdown (Select/Option):</label>
+            <select id="dropdown_select" name="dropdown_select">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="textarea_input">Textarea (Multi-line text):</label><br>
+            <textarea id="textarea_input" name="textarea_input" rows="4" cols="50"></textarea>
+        </p>
+
+        <hr>
+        <h2>Grouping and Special Elements</h2>
+
+        <p>
+            <label for="hidden_input">Hidden Input:</label>
+            <input type="hidden" id="hidden_input" name="hidden_input" value="secret_data">
+            (Not visible to user)
+        </p>
+
+        <p>
+            <label for="datalist_input">Datalist Input (Suggestion List):</label>
+            <input list="browsers" id="datalist_input" name="browser">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Edge">
+            </datalist>
+        </p>
+
+        <p>
+            <fieldset>
+                <legend>Fieldset and Legend Tag:</legend>
+                A group of related elements.
+            </fieldset>
+        </p>
+        
+        <hr>
+        <h2>Buttons</h2>
+
+        <p>
+            <input type="submit" value="Submit Button (Input)">
+        </p>
+        
+        <p>
+            <button type="submit">Submit Button (Button Tag)</button>
+        </p>
+
+        <p>
+            <input type="reset" value="Reset Button">
+        </p>
+        
+        <p>
+            <input type="button" value="Generic Button">
+        </p>
+
+    </form>
+
+</body>
+</html>

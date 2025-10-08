@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIV, SPAN, and P Layout Demonstration</title>
+</head>
+<body>
+
+    <h1>Block vs. Inline vs. Semantic Elements</h1>
+    <hr>
+
+    <h2>1. The P Tag (Semantic Block Element)</h2>
+    <p>
+        &lt;p&gt; (Paragraph) is a **Block-Level** element.
+    </p>
+    <p>
+        It is used for blocks of text, and by default, the browser adds space (margins) above and below it.
+    </p>
+    <p>
+        The text below is within a single $\text{p}$ tag to show that it occupies its own line.
+    </p>
+
+    <p>
+        This is the first paragraph.
+    </p>
+
+    <p>
+        This is the second paragraph. Notice how they stack on separate lines with extra vertical space in between.
+    </p>
+    
+    <hr>
+
+    <h2>2. The DIV Tag (Generic Block Element)</h2>
+    <p>
+        &lt;div&gt; (Division) is also a **Block-Level** element. It is a general-purpose container for grouping other elements.
+    </p>
+    <p>
+        By default, it takes up the entire width available and forces a line break before and after, just like $\text{p}$.
+    </p>
+    <p>
+        The following three $\text{div}$ elements are placed directly next to each other in the code, but the output is stacked:
+    </p>
+
+    <div>
+        This is the first DIV.
+    </div><div>
+        This is the second DIV.
+    </div><div>
+        This is the third DIV.
+    </div>
+    
+    <hr>
+
+    <h2>3. The SPAN Tag (Generic Inline Element)</h2>
+    <p>
+        &lt;span&gt; is an **Inline** element. It is a general-purpose container used to style or manipulate a small part of content *within* a larger block.
+    </p>
+    <p>
+        It **does not** force a line break, and it only takes up as much width as its content needs.
+    </p>
+    <p>
+        The text below contains three $\text{span}$ elements placed next to each other in the code. Observe the result:
+    </p>
+
+    <p>
+        This is a sentence that contains <span style="border: 1px solid black;">SPAN 1</span> <span style="border: 1px solid black;">SPAN 2</span> <span style="border: 1px solid black;">SPAN 3</span> all on the same line. They sit side-by-side without any default vertical separation.
+    </p>
+
+    <p>
+        **Note on SPAN:** Because there is no styling/CSS, it is difficult to see its size. In the example above, I've added a basic inline style to add a visible border to show exactly where the element's boundaries are, which is generally acceptable for educational demonstration.
+    </p>
+
+    <hr>
+
+    <h2>Summary of Layout Behavior</h2>
+
+    <p>
+        **BLOCK ELEMENTS** ($\text{p, div, h1, li, etc.}$):
+        <ul>
+            <li>Start on a new line.</li>
+            <li>Take up the full width available.</li>
+            <li>Stack vertically.</li>
+        </ul>
+    </p>
+
+    <p>
+        **INLINE ELEMENTS** ($\text{span, a, em, strong, etc.}$):
+        <ul>
+            <li>Do not start on a new line.</li>
+            <li>Only take up as much width as their content.</li>
+            <li>Flow horizontally with the text.</li>
+        </ul>
+    </p>
+
+</body>
+</html>
