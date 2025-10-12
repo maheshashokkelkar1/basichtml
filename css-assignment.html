@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: red;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            color: white;
+        }
+
+        .mainbody {
+            width: 100%;
+            overflow: hidden; /* Clearfix */
+        }
+
+        .left-panel,
+        .center-panel,
+        .right-panel {
+            float: left;
+            height: 300px;
+            padding: 10px;
+        }
+
+        .left-panel {
+            width: 30%;
+            background-color: green;
+            color: white;
+        }
+
+        .center-panel {
+            width: 40%;
+            background-color: rgb(253, 229, 11);
+            text-align: center;
+        }
+
+        .right-panel {
+            width: 30%;
+            background-color: pink;
+        }
+
+        .footer {
+            background-color: rgb(6, 3, 185);
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            color: white;
+            clear: both;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Assignment</h1>
+
+    <div class="header">
+        <h3>Header</h3>
+    </div>
+
+    <div class="mainbody">
+        <div class="left-panel">
+            <h3>Sidebar 1</h3>
+        </div>
+
+        <div class="center-panel">
+            <h4>
+                To create a world where sustainable living will be the norm;
+                where equitable access to clean energy, clean air, and clean
+                water will be the norm; where mutual respect and harmony for
+                and between humankind and the environment will be the norm.
+            </h4>
+        </div>
+
+        <div class="right-panel">
+            <h3>Sidebar 2</h3>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>Footer</h3>
+    </div>
+</body>
+
+</html>
