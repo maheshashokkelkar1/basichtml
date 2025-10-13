@@ -1,0 +1,19 @@
+a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover {
+    color: red;
+}
+
+/* a:visited {
+            color: green;
+        } */
+a:active {
+    color: orange;
+}
+
+a:link {
+    color: rgb(5, 15, 109);
+}

@@ -13,11 +13,13 @@ body {
 input[type="submit"] {
         background-color: blue;       /* Blue background */
         color: white;                 /* White text */
-        padding: 10px 20px;           /* Some spacing inside the button */
+        padding: 10px 30px;           /* Some spacing inside the button */
         border: none;                 /* Remove default border */
         border-radius: 4px;           /* Slightly rounded corners */
         cursor: pointer;              /* Cursor changes on hover */
         font-size: 16px;              /* Bigger text */
+        margin: 20px;
+    width: 50%;
     }
 
     input[type="submit"]:hover {
@@ -42,7 +44,13 @@ input[type="submit"] {
         </p>
         <p>
             <label for="phnumber">Phone Number:</label>
-            <input type="tel" id="phnumber_input" name="phnumber" />
+            <input type="tel" 
+                inputmode="tel" 
+                id="phnumber_input" 
+                name="phnumber" 
+                pattern="[0-9]{10}"
+                oninput="this.value = this.value.replace(/[\D]/g, '')"
+            />
         </p>
         <p>
             <label for="password">Password:</label>
