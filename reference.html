@@ -4,11 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speaker Submission</title>
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      /* display: flex;
+      justify-content: center; */
+    }
+
+    .submission-heading {
+      text-align: center;
+      background-color: rgb(160, 179, 240);
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgb(243, 238, 238);
+    }
+    .main-container {
+      text-align: center;
+      background-color: rgb(160, 179, 240);
+      /* padding: 10px;
+      width: 600px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgb(243, 238, 238);
+    }
+     @media screen and (max-width: 468px) 
+            .form-input-row {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .form-input-label {
+                width: 90%;
+                text-align: left;
+                padding-right: 0;
+            }
+
+            .form-input-element {
+                width: 90%;
+                text-align: left;
+            }
+    </style>
 </head>
 <body>
+  <div class="form-input-row"></div>
+  <div class="submission-heading">
     <h1>Speaker Submission</h1>
     <h3>Want to Speak at our fake conference?</h3><br>
     <h3> Fill out this form</h3>
+  </div>
     <div class="container">
         <div class="main-container">
     <form>
@@ -39,9 +91,10 @@
         </label>
       </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit" style="background-color: rgb(147, 147, 241);">Submit</button>
     </form>
         </div>
+    </div>
     </div>
 </body>
 </html>
