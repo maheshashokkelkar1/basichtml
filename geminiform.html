@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaker Submission</title>
+    <style>
+        /* General Reset and Base Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container for the Form */
+        .form-container {
+            background-color: #ffffff;
+            border: 1px solid #dcdcdc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 90%; /* To look good on all screens */
+        }
+
+        /* Header Styles */
+        .form-header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size: 2em;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .form-header p {
+            color: #666;
+            margin: 0;
+        }
+
+        /* Form Controls - Inputs, Select, Textarea */
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Crucial for padding/border not to increase overall width */
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        /* Radio Button Group Styling */
+        .radio-group label {
+            font-weight: normal;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        /* Checkbox Hint Text */
+        .abstract-hint {
+            display: block;
+            font-size: 0.9em;
+            color: #888;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+        
+        /* Checkbox Group */
+        .checkbox-group {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        /* Submit Button */
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #5b9bd5; /* A pleasant blue */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.2s;
+        }
+
+        .submit-button:hover {
+            background-color: #4a8ac2;
+        }
+
+        /* --- MOBILE/TABLET LAYOUT (Default) --- */
+        .form-container {
+            width: 400px; /* Mobile width */
+        }
+        .desktop-flex-group {
+            display: block; /* Stack on mobile */
+        }
+        
+        /* --- DESKTOP LAYOUT (Media Query) --- */
+        @media (min-width: 768px) {
+            .form-container {
+                width: 700px; /* Desktop width */
+                padding: 40px;
+            }
+
+            /* Main section containing Name/Email and other short fields */
+            .desktop-flex-group {
+                display: flex;
+                flex-wrap: wrap; /* Allows wrapping if fields get too narrow */
+                gap: 20px; /* Space between flex items */
+                margin-bottom: 20px;
+            }
+
+            /* Individual Flex Items (e.g., Name, Email, Type of Talk, T-Shirt Size) */
+            .desktop-flex-item {
+                flex: 1 1 45%; /* Allows items to grow/shrink, starting at ~45% width */
+            }
+
+            /* Specific size for Name/Email to take up equal space */
+            .name-email-group {
+                flex: 1 1 45%;
+                min-width: 250px; /* Prevent them from getting too small */
+            }
+
+            /* Ensure Type of Talk and T-Shirt Size take up equal space in the second row */
+            .talk-size-group {
+                flex: 1 1 45%;
+                min-width: 250px;
+            }
+
+            /* Abstract field should span the full width */
+            .abstract-group {
+                flex: 1 1 100%;
+            }
+
+            /* Desktop: Button and checkbox align better */
+            .submit-row {
+                display: flex;
+                justify-content: flex-end; /* Align the button to the right */
+                align-items: center;
+                gap: 20px;
+            }
+
+            .checkbox-group {
+                margin: 0; /* Remove mobile margins */
+            }
+            
+            .submit-button {
+                width: auto; /* Let the button size to its content */
+                padding: 12px 30px;
+            }
+
+            /* Adjust the layout for the T-Shirt Size select dropdown */
+            .tshirt-size-field {
+                display: flex;
+                align-items: center;
+            }
+            .tshirt-size-field label {
+                 width: 120px; /* Give the label fixed width */
+                 margin-right: 10px;
+            }
+            .tshirt-size-field select {
+                flex: 1; /* Make the select fill remaining space */
+                margin-bottom: 0; /* Remove extra margin */
+            }
+
+            /* Adjust for the inline radio buttons on desktop */
+            .talk-type-field {
+                display: flex;
+                align-items: center;
+            }
+            .talk-type-field label {
+                width: 120px; /* Give the label fixed width */
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+            .talk-type-field .radio-group {
+                display: flex;
+                align-items: center;
+            }
+
+            /* Input fields themselves are inline on desktop */
+            .desktop-flex-item .form-group {
+                display: flex;
+                align-items: center;
+            }
+            .desktop-flex-item .form-group label {
+                margin-bottom: 0;
+                width: 100px; /* Set a consistent label width */
+            }
+            .desktop-flex-item .form-group input {
+                margin-bottom: 0;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <header class="form-header">
+            <p style="font-size: 0.8em; color: #aaa; margin-bottom: 20px;">EXAMPLE.HTML</p>
+            <h2>Speaker Submission</h2>
+            <p>Want to speak at our fake conference? Fill out this form.</p>
+        </header>
+
+        <form action="#" method="POST">
+            
+            <div class="desktop-flex-group">
+                
+                <div class="desktop-flex-item name-email-group">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                </div>
+
+                <div class="desktop-flex-item name-email-group">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <div class="desktop-flex-item talk-size-group">
+                    <div class="form-group talk-type-field">
+                        <label>Type of Talk</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="talk_type" value="main_stage" checked> Main Stage</label>
+                            <label><input type="radio" name="talk_type" value="workshop"> Workshop</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="desktop-flex-item talk-size-group">
+                    <div class="form-group tshirt-size-field">
+                        <label for="tshirt_size">T-Shirt Size</label>
+                        <select id="tshirt_size" name="tshirt_size">
+                            <option value="xs">Extra Small</option>
+                            <option value="s">Small</option>
+                            <option value="m">Medium</option>
+                            <option value="l">Large</option>
+                            <option value="xl">Extra Large</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="abstract-group">
+                    <div class="form-group">
+                        <label for="abstract">Abstract</label>
+                        <textarea id="abstract" name="abstract" rows="8" required></textarea>
+                        <span class="abstract-hint">Describe your talk in 500 words or less</span>
+                    </div>
+                </div>
+
+            </div> <div class="submit-row">
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="available" value="yes">
+                        I'm actually available the date of the talk
+                    </label>
+                </div>
+    
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+
+
+        </form>
+    </div>
+
+</body>
+</html>

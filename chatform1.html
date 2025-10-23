@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Speaker Submission</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #dbe0e5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-wrapper {
+      width: 100%;
+      max-width: 500px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-header h2 {
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .form-header p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .radio-group {
+      margin-bottom: 20px;
+      display: flex;
+    }
+
+    .radio-group label {
+      margin-right: 15px;
+      font-weight: normal;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-group input {
+      margin-right: 10px;
+    }
+
+    .submit-button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background-color: #357ab8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-wrapper">
+    <div class="form-header">
+      <h2>Speaker Submission</h2>
+      <p>Want to speak at our fake conference? Fill out this form.</p>
+    </div>
+
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label>Type of Talk</label>
+      <div class="radio-group">
+        <label><input type="radio" name="talkType" value="Main Stage"> Main Stage</label>
+        <label><input type="radio" name="talkType" value="Workshop"> Workshop</label>
+      </div>
+
+      <label for="tshirt">T-Shirt Size</label>
+      <select id="tshirt" name="tshirt">
+        <option>Extra Small</option>
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+        <option>Extra Large</option>
+      </select>
+
+      <label for="abstract">Abstract</label>
+      <textarea id="abstract" name="abstract" placeholder="Describe your talk in 500 words or less"></textarea>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="available" name="available">
+        <label for="available">I'm actually available the date of the talk</label>
+      </div>
+
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>

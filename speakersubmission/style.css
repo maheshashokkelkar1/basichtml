@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+.container-box {
+    text-align: center;
+    background-color: rgb(160, 179, 240);
+    padding: 20px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(243, 238, 238);
+    margin-top: 20px;
+}
+
+.form-heading {
+    
+}
+
+.form-container {
+    
+}
+
+.submit-btn {
+    background-color: #6b8bf7;
+    border: none;
+    color: rgb(242, 245, 247);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {}

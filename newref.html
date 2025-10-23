@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample form</title>
+    <style>
+        .form-input-row {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        .form-input-label {
+            width: 30%;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .form-input-element {
+            width: 70%;
+            text-align: left;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-container {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .form-input-row {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .form-input-label {
+                width: 90%;
+                text-align: left;
+                padding-right: 0;
+            }
+
+            .form-input-element {
+                width: 90%;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-container">
+            <h1>Sample form</h1>
+            <form>
+                <div class="form-input-row">
+                    <div class="form-input-label"><label for="name">Name</label></div>
+                    <div class="form-input-element"><input type="text" name="name" id="name"></div>
+                </div>
+                <div class="form-input-row">
+                    <div class="form-input-label"><label for="password">Password</label></div>
+                    <div class="form-input-element"><input type="password" name="password" id="password"></div>
+                </div>
+                <div class="form-input-row">
+                    <div class="form-input-label"><label for="gender">Gender</label></div>
+                    <div class="form-input-element">
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </div>
+                </div>
+                <div class="form-input-row">
+                    <div class="form-input-label"><label for="name">Name</label></div>
+                    <div class="form-input-element"><input type="text" name="name" id="name"></div>
+                </div>
+                <div class="form-input-row">
+                    <div class="form-input-label"><label for="name">Name</label></div>
+                    <div class="form-input-element"><input type="text" name="name" id="name"></div>
+                </div>
+                <div class="form-input-row">
+                    <div class="form-input-label"><label for="name">Name</label></div>
+                    <div class="form-input-element"><input type="text" name="name" id="name"></div>
+                </div>
+                <div class="form-input-row">
+                    <div class="form-input-label"><label for="name">Name</label></div>
+                    <div class="form-input-element"><input type="text" name="name" id="name"></div>
+                </div>
+                <div class="form-input-row">
+                    <div class="form-input-label"><label for="abstract">Abstract</label></div>
+                    <div class="form-input-element">
+                        <textarea name="abstract" id="abstract"></textarea>
+                    </div>
+                </div>
+                <div class="form-input-row">
+                    <div class="form-input-label"></div>
+                    <div class="form-input-element">
+                        <input type="checkbox" name="available" /> I'm actually available the date of the talk
+                    </div>
+                </div>
+                <div class="form-input-row">
+                    <div class="form-input-label"><label for="tshirt">T-shirt</label></div>
+                    <div class="form-input-element">
+                        <select id="tshirt" name="tshirt">
+                            <option>Extra Small</option>
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                            <option>Extra Large</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-input-row">
+                    <div class="form-input-label"></div>
+                    <div class="form-input-element"><button type="submit">Submit</button></div>
+                </div>                
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
