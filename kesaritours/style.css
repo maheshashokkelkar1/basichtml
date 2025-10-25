@@ -1,0 +1,60 @@
+.main {
+    text-align: center;
+}
+
+.header {
+    background-color: black;
+    color: white
+        /* padding: 10px; */
+}
+
+.fjourney {
+    background-color: red;
+    padding: 10px;
+
+}
+
+.trending {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px
+}
+
+.tour-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.tour-bluecard {
+    background-color: rgb(89, 78, 236);
+    border: 1px solid #ddd;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.footer {
+    text-align: left;
+    background-color: black;
+    color: white;
+    padding: 5px
+}
