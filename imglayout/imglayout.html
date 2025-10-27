@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>K12 Demo: Simple Image Orientation</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; }
+    .nav { background: #007bff; padding: 20px; color: white; text-align: center; }
+    .container { max-width: 900px; margin: 30px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px #ccc; padding: 30px; }
+    .section { margin-bottom: 40px; }
+    h2 { color: #007bff; }
+    .img-demo { width: 300px; border-radius: 10px; box-shadow: 0 1px 5px #bbb; margin-bottom: 18px; }
+
+    /* Utility classes for layout */
+    .img-centered { display: block; margin-left: auto; margin-right: auto; }
+    .img-main { width: 200px; height: 200px; object-fit: cover; }
+    .caption { text-align: center; color: #444; }
+    .gallery { display: flex; gap: 15px; justify-content: center; }
+    .gallery-img { width: 140px; }
+    .flex-container { display: flex; gap: 30px; align-items: center; }
+
+    /* Card component styles */
+    .card {
+      background: #f1f8ff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px #ddd;
+      width: 280px;
+      margin: auto;
+    }
+    .card-title { color: #339af0; }
+
+    /* Footer styles */
+    .footer { margin-top: 55px; color: #888; text-align: center; }
+
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <h1>K12 Demo: Simple Image Orientation</h1>
+    <div>Showcasing different ways to display images with text using basic HTML & CSS</div>
+  </div>
+  <div class="container">
+
+    <div class="section">
+      <h2>Centered Image with Caption</h2>
+      <img src="3d-model.png" alt="A 3D model" class="img-demo img-centered img-main">
+      <div class="caption">Centered image, perfect for titles or highlights.</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis velit at sodales varius.</p>
+    </div>
+
+    <div class="section">
+      <h2>Side-by-Side Gallery</h2>
+      <div class="gallery">
+        <img src="city-scene.png" alt="A city scene" class="img-demo gallery-img">
+        <img src="technology.png" alt="A technology image" class="img-demo gallery-img">
+        <img src="animal.png" alt="An animal" class="img-demo gallery-img">
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed risus vitae neque gravida feugiat.</p>
+    </div>
+
+    <div class="section">
+      <h2>Image Left, Text Right</h2>
+      <div class="flex-container">
+        <img src="food.png" alt="A food item" class="img-demo">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a dictum erat, eu convallis sem.</p>
+          <p>Sed quis mauris posuere, sodales urna at, malesuada velit. Pellentesque vulputate ex in dui euismod venenatis.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Card-Style Image with Title</h2>
+      <div class="card">
+        <img src="architecture-detail.png" alt="A piece of architecture" class="img-demo">
+        <h3 class="card-title">Demo Card Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <em>Demo site made for K12 HTML/CSS orientation. Images are placeholders, text is lorem ipsum for demonstration only.</em>
+    </div>
+  </div>
+</body>
+</html>
